@@ -1,6 +1,6 @@
-/* Linked list in C 								*/
-/* Example 											*/
-/* Make a list that each element contain 1 integer 	*/
+/* Linked list in C 					*/
+/* Example 						*/
+/* Make a list that each element contain 1 integer	*/
 
 
 typedef struct node{
