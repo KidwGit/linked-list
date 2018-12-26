@@ -1,0 +1,55 @@
+/* Linked list in C 								*/
+/* Example 											*/
+/* Make a list that each element contain 1 integer 	*/
+
+
+typedef struct node{
+	int item;
+	struct node *next;
+} *listnode;
+
+/*--*/
+void Insert_Begin(listnode *p; int x){
+	listnode q;
+	q = (listnode)malloc(sizeof(listnode));
+	q->item = x;
+	q->next  = *p;
+	*p = q;
+}
+
+/*--*/
+void Insert_End(listnode *p,int x){
+	listnode q,r;
+	q = (listnode)malloc(sizeof(struct node));
+	q->item = x;
+	q->next = Null;
+	
+	if(*p == NULL) *p = q;
+	else{
+		r = *p;
+		while(r->next != null) r = r->next;
+		r->next = q;
+	}
+}
+
+/*--*/
+void Inser_Middle(listnode *p, int postion, int x){
+	int count = 1, found = 0;
+	listnode q,r;
+	r = *p;
+	
+	while((r != NULL)&& (found == 0)){
+		if(count == postion){
+			q = (listnode)malloc(sizeof(struct node));
+			q->item = x;
+			q-> next = r ->next;
+			r->next = q;
+			foun = 1;
+		}
+		count++;
+		r= r - >next;
+	}
+	
+	if (found == 0) 
+		printf("The insert postion is not found!");
+}
