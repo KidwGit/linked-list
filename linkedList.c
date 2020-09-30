@@ -8,7 +8,7 @@ typedef struct node{
 	struct node *next;
 } *listnode;
 
-/*--*/
+/*Function to insert node at beginning. */
 void Insert_Begin(listnode *p; int x){
 	listnode q;
 	q = (listnode)malloc(sizeof(listnode));
@@ -17,7 +17,7 @@ void Insert_Begin(listnode *p; int x){
 	*p = q;
 }
 
-/*--*/
+/*Function to insert node at end*/
 void Insert_End(listnode *p,int x){
 	listnode q,r;
 	q = (listnode)malloc(sizeof(struct node));
@@ -32,7 +32,7 @@ void Insert_End(listnode *p,int x){
 	}
 }
 
-/*--*/
+/*Function to insert node in the middle of linked list.*/
 void Inser_Middle(listnode *p, int postion, int x){
 	int count = 1, found = 0;
 	listnode q,r;
